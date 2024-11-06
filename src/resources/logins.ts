@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as LoginsAPI from './logins';
 
 export class Logins extends APIResource {
   /**
@@ -83,8 +82,10 @@ export interface LoginWechatParams {
   spread_id?: number;
 }
 
-export namespace Logins {
-  export import LoginResponse = LoginsAPI.LoginResponse;
-  export import LoginSMSParams = LoginsAPI.LoginSMSParams;
-  export import LoginWechatParams = LoginsAPI.LoginWechatParams;
+export declare namespace Logins {
+  export {
+    type LoginResponse as LoginResponse,
+    type LoginSMSParams as LoginSMSParams,
+    type LoginWechatParams as LoginWechatParams,
+  };
 }

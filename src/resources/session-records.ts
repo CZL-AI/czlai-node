@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as SessionRecordsAPI from './session-records';
 
 export class SessionRecords extends APIResource {
   /**
@@ -49,6 +48,6 @@ export interface SessionRecordHistoryParams {
   stage?: number;
 }
 
-export namespace SessionRecords {
-  export import SessionRecordHistoryParams = SessionRecordsAPI.SessionRecordHistoryParams;
+export declare namespace SessionRecords {
+  export { type SessionRecordHistoryParams as SessionRecordHistoryParams };
 }

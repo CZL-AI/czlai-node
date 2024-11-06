@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as UploadImageOssAPI from './upload-image-oss';
 
 export class UploadImageOss extends APIResource {
   /**
@@ -39,6 +38,6 @@ export interface UploadImageOssCreateParams {
   upload_to_local?: number;
 }
 
-export namespace UploadImageOss {
-  export import UploadImageOssCreateParams = UploadImageOssAPI.UploadImageOssCreateParams;
+export declare namespace UploadImageOss {
+  export { type UploadImageOssCreateParams as UploadImageOssCreateParams };
 }

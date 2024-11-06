@@ -2,7 +2,6 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as AsrAPI from './asr';
 
 export class Asr extends APIResource {
   /**
@@ -19,6 +18,6 @@ export interface AsrCreateParams {
   speech?: string;
 }
 
-export namespace Asr {
-  export import AsrCreateParams = AsrAPI.AsrCreateParams;
+export declare namespace Asr {
+  export { type AsrCreateParams as AsrCreateParams };
 }

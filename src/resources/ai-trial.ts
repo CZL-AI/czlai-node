@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AITrialAPI from './ai-trial';
 
 export class AITrial extends APIResource {
   /**
@@ -171,12 +170,14 @@ export interface AITrialSummaryParams {
   session_id?: string;
 }
 
-export namespace AITrial {
-  export import AITrialAnswerResponse = AITrialAPI.AITrialAnswerResponse;
-  export import AITrialAnswerParams = AITrialAPI.AITrialAnswerParams;
-  export import AITrialHistoryParams = AITrialAPI.AITrialHistoryParams;
-  export import AITrialRelationParams = AITrialAPI.AITrialRelationParams;
-  export import AITrialReportParams = AITrialAPI.AITrialReportParams;
-  export import AITrialSessionStartParams = AITrialAPI.AITrialSessionStartParams;
-  export import AITrialSummaryParams = AITrialAPI.AITrialSummaryParams;
+export declare namespace AITrial {
+  export {
+    type AITrialAnswerResponse as AITrialAnswerResponse,
+    type AITrialAnswerParams as AITrialAnswerParams,
+    type AITrialHistoryParams as AITrialHistoryParams,
+    type AITrialRelationParams as AITrialRelationParams,
+    type AITrialReportParams as AITrialReportParams,
+    type AITrialSessionStartParams as AITrialSessionStartParams,
+    type AITrialSummaryParams as AITrialSummaryParams,
+  };
 }

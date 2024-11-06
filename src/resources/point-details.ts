@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as PointDetailsAPI from './point-details';
 
 export class PointDetails extends APIResource {
   /**
@@ -90,7 +89,9 @@ export interface PointDetailRetrieveParams {
   page?: number;
 }
 
-export namespace PointDetails {
-  export import PointDetailRetrieveResponse = PointDetailsAPI.PointDetailRetrieveResponse;
-  export import PointDetailRetrieveParams = PointDetailsAPI.PointDetailRetrieveParams;
+export declare namespace PointDetails {
+  export {
+    type PointDetailRetrieveResponse as PointDetailRetrieveResponse,
+    type PointDetailRetrieveParams as PointDetailRetrieveParams,
+  };
 }

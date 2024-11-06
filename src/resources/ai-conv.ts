@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AIConvAPI from './ai-conv';
 
 export class AIConv extends APIResource {
   /**
@@ -77,9 +76,11 @@ export interface AIConvValidateParams {
   user_input?: string;
 }
 
-export namespace AIConv {
-  export import AIConvAnswerResponse = AIConvAPI.AIConvAnswerResponse;
-  export import AIConvAnswerParams = AIConvAPI.AIConvAnswerParams;
-  export import AIConvRelationParams = AIConvAPI.AIConvRelationParams;
-  export import AIConvValidateParams = AIConvAPI.AIConvValidateParams;
+export declare namespace AIConv {
+  export {
+    type AIConvAnswerResponse as AIConvAnswerResponse,
+    type AIConvAnswerParams as AIConvAnswerParams,
+    type AIConvRelationParams as AIConvRelationParams,
+    type AIConvValidateParams as AIConvValidateParams,
+  };
 }

@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AipicAPI from './aipic';
 
 export class Aipic extends APIResource {
   /**
@@ -184,11 +183,13 @@ export interface AipicValidateParams {
   session_id?: string;
 }
 
-export namespace Aipic {
-  export import AipicOptionsParams = AipicAPI.AipicOptionsParams;
-  export import AipicPicResultParams = AipicAPI.AipicPicResultParams;
-  export import AipicQuestionParams = AipicAPI.AipicQuestionParams;
-  export import AipicReportParams = AipicAPI.AipicReportParams;
-  export import AipicReportTaskParams = AipicAPI.AipicReportTaskParams;
-  export import AipicValidateParams = AipicAPI.AipicValidateParams;
+export declare namespace Aipic {
+  export {
+    type AipicOptionsParams as AipicOptionsParams,
+    type AipicPicResultParams as AipicPicResultParams,
+    type AipicQuestionParams as AipicQuestionParams,
+    type AipicReportParams as AipicReportParams,
+    type AipicReportTaskParams as AipicReportTaskParams,
+    type AipicValidateParams as AipicValidateParams,
+  };
 }

@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AipicExoticsAPI from './aipic-exotics';
 
 export class AipicExotics extends APIResource {
   /**
@@ -217,12 +216,14 @@ export interface AipicExoticValidateParams {
   session_id?: string;
 }
 
-export namespace AipicExotics {
-  export import AipicExoticOptionsParams = AipicExoticsAPI.AipicExoticOptionsParams;
-  export import AipicExoticPicResultParams = AipicExoticsAPI.AipicExoticPicResultParams;
-  export import AipicExoticQuestionParams = AipicExoticsAPI.AipicExoticQuestionParams;
-  export import AipicExoticReportParams = AipicExoticsAPI.AipicExoticReportParams;
-  export import AipicExoticReportTaskParams = AipicExoticsAPI.AipicExoticReportTaskParams;
-  export import AipicExoticSummaryParams = AipicExoticsAPI.AipicExoticSummaryParams;
-  export import AipicExoticValidateParams = AipicExoticsAPI.AipicExoticValidateParams;
+export declare namespace AipicExotics {
+  export {
+    type AipicExoticOptionsParams as AipicExoticOptionsParams,
+    type AipicExoticPicResultParams as AipicExoticPicResultParams,
+    type AipicExoticQuestionParams as AipicExoticQuestionParams,
+    type AipicExoticReportParams as AipicExoticReportParams,
+    type AipicExoticReportTaskParams as AipicExoticReportTaskParams,
+    type AipicExoticSummaryParams as AipicExoticSummaryParams,
+    type AipicExoticValidateParams as AipicExoticValidateParams,
+  };
 }

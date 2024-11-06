@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as MagnumKeysAPI from './magnum-keys';
 
 export class MagnumKeys extends APIResource {
   /**
@@ -144,10 +143,12 @@ export interface MagnumKeyVoiceQuestionParams {
   user_uuid?: string | null;
 }
 
-export namespace MagnumKeys {
-  export import MagnumKeyGetKeyParams = MagnumKeysAPI.MagnumKeyGetKeyParams;
-  export import MagnumKeyPictureChoiceParams = MagnumKeysAPI.MagnumKeyPictureChoiceParams;
-  export import MagnumKeyPictureQuestionParams = MagnumKeysAPI.MagnumKeyPictureQuestionParams;
-  export import MagnumKeyVoiceChoiceParams = MagnumKeysAPI.MagnumKeyVoiceChoiceParams;
-  export import MagnumKeyVoiceQuestionParams = MagnumKeysAPI.MagnumKeyVoiceQuestionParams;
+export declare namespace MagnumKeys {
+  export {
+    type MagnumKeyGetKeyParams as MagnumKeyGetKeyParams,
+    type MagnumKeyPictureChoiceParams as MagnumKeyPictureChoiceParams,
+    type MagnumKeyPictureQuestionParams as MagnumKeyPictureQuestionParams,
+    type MagnumKeyVoiceChoiceParams as MagnumKeyVoiceChoiceParams,
+    type MagnumKeyVoiceQuestionParams as MagnumKeyVoiceQuestionParams,
+  };
 }
