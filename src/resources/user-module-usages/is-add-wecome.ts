@@ -2,7 +2,6 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as IsAddWecomeAPI from './is-add-wecome';
 
 export class IsAddWecome extends APIResource {
   /**
@@ -27,6 +26,6 @@ export namespace IsAddWecomeRetrieveResponse {
   }
 }
 
-export namespace IsAddWecome {
-  export import IsAddWecomeRetrieveResponse = IsAddWecomeAPI.IsAddWecomeRetrieveResponse;
+export declare namespace IsAddWecome {
+  export { type IsAddWecomeRetrieveResponse as IsAddWecomeRetrieveResponse };
 }

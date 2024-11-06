@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as MedicationAnalysisAPI from './medication-analysis';
 
 export class MedicationAnalysis extends APIResource {
   /**
@@ -85,8 +84,10 @@ export interface MedicationAnalysisSummaryParams {
   session_id?: string;
 }
 
-export namespace MedicationAnalysis {
-  export import MedicationAnalysisPicResultParams = MedicationAnalysisAPI.MedicationAnalysisPicResultParams;
-  export import MedicationAnalysisReportParams = MedicationAnalysisAPI.MedicationAnalysisReportParams;
-  export import MedicationAnalysisSummaryParams = MedicationAnalysisAPI.MedicationAnalysisSummaryParams;
+export declare namespace MedicationAnalysis {
+  export {
+    type MedicationAnalysisPicResultParams as MedicationAnalysisPicResultParams,
+    type MedicationAnalysisReportParams as MedicationAnalysisReportParams,
+    type MedicationAnalysisSummaryParams as MedicationAnalysisSummaryParams,
+  };
 }

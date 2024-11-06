@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as PoliciesAPI from './policies';
 
 export class Policies extends APIResource {
   /**
@@ -29,6 +28,6 @@ export interface PolicyPolicyInfoParams {
   policy_type?: number;
 }
 
-export namespace Policies {
-  export import PolicyPolicyInfoParams = PoliciesAPI.PolicyPolicyInfoParams;
+export declare namespace Policies {
+  export { type PolicyPolicyInfoParams as PolicyPolicyInfoParams };
 }

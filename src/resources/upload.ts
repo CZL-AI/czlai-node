@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as UploadAPI from './upload';
 
 export class Upload extends APIResource {
   /**
@@ -34,6 +33,6 @@ export interface UploadCreateParams {
   is_to_cloud?: number;
 }
 
-export namespace Upload {
-  export import UploadCreateParams = UploadAPI.UploadCreateParams;
+export declare namespace Upload {
+  export { type UploadCreateParams as UploadCreateParams };
 }

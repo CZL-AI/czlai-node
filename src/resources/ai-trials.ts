@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AITrialsAPI from './ai-trials';
 
 export class AITrials extends APIResource {
   /**
@@ -57,7 +56,9 @@ export interface AITrialQuestionParams {
   session_id?: string;
 }
 
-export namespace AITrials {
-  export import AITrialOptionsParams = AITrialsAPI.AITrialOptionsParams;
-  export import AITrialQuestionParams = AITrialsAPI.AITrialQuestionParams;
+export declare namespace AITrials {
+  export {
+    type AITrialOptionsParams as AITrialOptionsParams,
+    type AITrialQuestionParams as AITrialQuestionParams,
+  };
 }

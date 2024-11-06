@@ -2,12 +2,16 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as UsersAPI from './users';
 import * as AsrAPI from './asr';
+import { Asr, AsrCreateParams } from './asr';
 import * as ContactAPI from './contact';
+import { Contact, ContactCreateParams } from './contact';
 import * as IndustryAPI from './industry';
+import { Industry } from './industry';
 import * as SummaryAPI from './summary';
+import { Summary, SummaryCreateParams } from './summary';
 import * as UserInfoAPI from './user-info';
+import { UserInfo, UserInfoRetrieveParams } from './user-info';
 
 export class Users extends APIResource {
   userInfo: UserInfoAPI.UserInfo = new UserInfoAPI.UserInfo(this._client);
@@ -56,16 +60,22 @@ export interface UserSendSMSParams {
   phone?: string;
 }
 
-export namespace Users {
-  export import UserChatVParams = UsersAPI.UserChatVParams;
-  export import UserSendSMSParams = UsersAPI.UserSendSMSParams;
-  export import UserInfo = UserInfoAPI.UserInfo;
-  export import UserInfoRetrieveParams = UserInfoAPI.UserInfoRetrieveParams;
-  export import Contact = ContactAPI.Contact;
-  export import ContactCreateParams = ContactAPI.ContactCreateParams;
-  export import Summary = SummaryAPI.Summary;
-  export import SummaryCreateParams = SummaryAPI.SummaryCreateParams;
-  export import Asr = AsrAPI.Asr;
-  export import AsrCreateParams = AsrAPI.AsrCreateParams;
-  export import Industry = IndustryAPI.Industry;
+Users.UserInfo = UserInfo;
+Users.Contact = Contact;
+Users.Summary = Summary;
+Users.Asr = Asr;
+Users.Industry = Industry;
+
+export declare namespace Users {
+  export { type UserChatVParams as UserChatVParams, type UserSendSMSParams as UserSendSMSParams };
+
+  export { UserInfo as UserInfo, type UserInfoRetrieveParams as UserInfoRetrieveParams };
+
+  export { Contact as Contact, type ContactCreateParams as ContactCreateParams };
+
+  export { Summary as Summary, type SummaryCreateParams as SummaryCreateParams };
+
+  export { Asr as Asr, type AsrCreateParams as AsrCreateParams };
+
+  export { Industry as Industry };
 }

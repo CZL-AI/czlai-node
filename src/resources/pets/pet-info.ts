@@ -2,7 +2,6 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as PetInfoAPI from './pet-info';
 
 export class PetInfo extends APIResource {
   /**
@@ -29,6 +28,6 @@ export interface PetInfoRetrieveParams {
   is_sort?: 0 | 1;
 }
 
-export namespace PetInfo {
-  export import PetInfoRetrieveParams = PetInfoAPI.PetInfoRetrieveParams;
+export declare namespace PetInfo {
+  export { type PetInfoRetrieveParams as PetInfoRetrieveParams };
 }
