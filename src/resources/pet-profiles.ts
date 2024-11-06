@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as PetProfilesAPI from './pet-profiles';
 
 export class PetProfiles extends APIResource {
   /**
@@ -334,16 +333,18 @@ export interface PetProfileVarietyParams {
   user_input?: string;
 }
 
-export namespace PetProfiles {
-  export import PetProfile = PetProfilesAPI.PetProfile;
-  export import PetProfileRetrieveResponse = PetProfilesAPI.PetProfileRetrieveResponse;
-  export import PetProfileListResponse = PetProfilesAPI.PetProfileListResponse;
-  export import PetProfileDeleteResponse = PetProfilesAPI.PetProfileDeleteResponse;
-  export import PetProfileVarietyResponse = PetProfilesAPI.PetProfileVarietyResponse;
-  export import PetProfileCreateParams = PetProfilesAPI.PetProfileCreateParams;
-  export import PetProfileRetrieveParams = PetProfilesAPI.PetProfileRetrieveParams;
-  export import PetProfileUpdateParams = PetProfilesAPI.PetProfileUpdateParams;
-  export import PetProfileDeleteParams = PetProfilesAPI.PetProfileDeleteParams;
-  export import PetProfileExInfoParams = PetProfilesAPI.PetProfileExInfoParams;
-  export import PetProfileVarietyParams = PetProfilesAPI.PetProfileVarietyParams;
+export declare namespace PetProfiles {
+  export {
+    type PetProfile as PetProfile,
+    type PetProfileRetrieveResponse as PetProfileRetrieveResponse,
+    type PetProfileListResponse as PetProfileListResponse,
+    type PetProfileDeleteResponse as PetProfileDeleteResponse,
+    type PetProfileVarietyResponse as PetProfileVarietyResponse,
+    type PetProfileCreateParams as PetProfileCreateParams,
+    type PetProfileRetrieveParams as PetProfileRetrieveParams,
+    type PetProfileUpdateParams as PetProfileUpdateParams,
+    type PetProfileDeleteParams as PetProfileDeleteParams,
+    type PetProfileExInfoParams as PetProfileExInfoParams,
+    type PetProfileVarietyParams as PetProfileVarietyParams,
+  };
 }

@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as UserAdvicesAPI from './user-advices';
 
 export class UserAdvices extends APIResource {
   /**
@@ -31,6 +30,6 @@ export interface UserAdviceCreateParams {
   image_list: Array<string>;
 }
 
-export namespace UserAdvices {
-  export import UserAdviceCreateParams = UserAdvicesAPI.UserAdviceCreateParams;
+export declare namespace UserAdvices {
+  export { type UserAdviceCreateParams as UserAdviceCreateParams };
 }

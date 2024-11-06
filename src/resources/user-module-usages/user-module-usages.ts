@@ -2,8 +2,8 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as UserModuleUsagesAPI from './user-module-usages';
 import * as IsAddWecomeAPI from './is-add-wecome';
+import { IsAddWecome, IsAddWecomeRetrieveResponse } from './is-add-wecome';
 
 export class UserModuleUsages extends APIResource {
   isAddWecome: IsAddWecomeAPI.IsAddWecome = new IsAddWecomeAPI.IsAddWecome(this._client);
@@ -73,10 +73,14 @@ export interface UserModuleUsageGetAddWecomeBonusParams {
   module_type?: number;
 }
 
-export namespace UserModuleUsages {
-  export import UserModuleUsageGetAddWecomeBonusResponse = UserModuleUsagesAPI.UserModuleUsageGetAddWecomeBonusResponse;
-  export import UserModuleUsageGetWechatMiniQrcodeResponse = UserModuleUsagesAPI.UserModuleUsageGetWechatMiniQrcodeResponse;
-  export import UserModuleUsageGetAddWecomeBonusParams = UserModuleUsagesAPI.UserModuleUsageGetAddWecomeBonusParams;
-  export import IsAddWecome = IsAddWecomeAPI.IsAddWecome;
-  export import IsAddWecomeRetrieveResponse = IsAddWecomeAPI.IsAddWecomeRetrieveResponse;
+UserModuleUsages.IsAddWecome = IsAddWecome;
+
+export declare namespace UserModuleUsages {
+  export {
+    type UserModuleUsageGetAddWecomeBonusResponse as UserModuleUsageGetAddWecomeBonusResponse,
+    type UserModuleUsageGetWechatMiniQrcodeResponse as UserModuleUsageGetWechatMiniQrcodeResponse,
+    type UserModuleUsageGetAddWecomeBonusParams as UserModuleUsageGetAddWecomeBonusParams,
+  };
+
+  export { IsAddWecome as IsAddWecome, type IsAddWecomeRetrieveResponse as IsAddWecomeRetrieveResponse };
 }

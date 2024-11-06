@@ -2,7 +2,6 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as ContactAPI from './contact';
 
 export class Contact extends APIResource {
   /**
@@ -25,6 +24,6 @@ export interface ContactCreateParams {
   mobile?: string;
 }
 
-export namespace Contact {
-  export import ContactCreateParams = ContactAPI.ContactCreateParams;
+export declare namespace Contact {
+  export { type ContactCreateParams as ContactCreateParams };
 }

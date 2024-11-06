@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AidocExoticAPI from './aidoc-exotic';
 
 export class AidocExotic extends APIResource {
   /**
@@ -253,19 +252,21 @@ export interface AidocExoticSummarizeParams {
   session_id?: string;
 }
 
-export namespace AidocExotic {
-  export import AidocExoticAskContinueResponse = AidocExoticAPI.AidocExoticAskContinueResponse;
-  export import AidocExoticIfNeedImageResponse = AidocExoticAPI.AidocExoticIfNeedImageResponse;
-  export import AidocExoticKeywordsResponse = AidocExoticAPI.AidocExoticKeywordsResponse;
-  export import AidocExoticOptionsResponse = AidocExoticAPI.AidocExoticOptionsResponse;
-  export import AidocExoticQuestionResponse = AidocExoticAPI.AidocExoticQuestionResponse;
-  export import AidocExoticAskContinueParams = AidocExoticAPI.AidocExoticAskContinueParams;
-  export import AidocExoticIfNeedImageParams = AidocExoticAPI.AidocExoticIfNeedImageParams;
-  export import AidocExoticKeywordsParams = AidocExoticAPI.AidocExoticKeywordsParams;
-  export import AidocExoticOptionsParams = AidocExoticAPI.AidocExoticOptionsParams;
-  export import AidocExoticPicResultParams = AidocExoticAPI.AidocExoticPicResultParams;
-  export import AidocExoticQuestionParams = AidocExoticAPI.AidocExoticQuestionParams;
-  export import AidocExoticReportParams = AidocExoticAPI.AidocExoticReportParams;
-  export import AidocExoticReportTaskParams = AidocExoticAPI.AidocExoticReportTaskParams;
-  export import AidocExoticSummarizeParams = AidocExoticAPI.AidocExoticSummarizeParams;
+export declare namespace AidocExotic {
+  export {
+    type AidocExoticAskContinueResponse as AidocExoticAskContinueResponse,
+    type AidocExoticIfNeedImageResponse as AidocExoticIfNeedImageResponse,
+    type AidocExoticKeywordsResponse as AidocExoticKeywordsResponse,
+    type AidocExoticOptionsResponse as AidocExoticOptionsResponse,
+    type AidocExoticQuestionResponse as AidocExoticQuestionResponse,
+    type AidocExoticAskContinueParams as AidocExoticAskContinueParams,
+    type AidocExoticIfNeedImageParams as AidocExoticIfNeedImageParams,
+    type AidocExoticKeywordsParams as AidocExoticKeywordsParams,
+    type AidocExoticOptionsParams as AidocExoticOptionsParams,
+    type AidocExoticPicResultParams as AidocExoticPicResultParams,
+    type AidocExoticQuestionParams as AidocExoticQuestionParams,
+    type AidocExoticReportParams as AidocExoticReportParams,
+    type AidocExoticReportTaskParams as AidocExoticReportTaskParams,
+    type AidocExoticSummarizeParams as AidocExoticSummarizeParams,
+  };
 }

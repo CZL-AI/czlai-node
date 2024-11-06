@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as UploadImageAPI from './upload-image';
 
 export class UploadImage extends APIResource {
   /**
@@ -39,6 +38,6 @@ export interface UploadImageCreateParams {
   upload_type?: 1 | 2 | 3 | 4;
 }
 
-export namespace UploadImage {
-  export import UploadImageCreateParams = UploadImageAPI.UploadImageCreateParams;
+export declare namespace UploadImage {
+  export { type UploadImageCreateParams as UploadImageCreateParams };
 }

@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as PointTasksAPI from './point-tasks';
 
 export class PointTasks extends APIResource {
   /**
@@ -127,8 +126,10 @@ export interface PointTaskConfirmParams {
   task_id?: number;
 }
 
-export namespace PointTasks {
-  export import PointTaskListResponse = PointTasksAPI.PointTaskListResponse;
-  export import PointTaskBonusParams = PointTasksAPI.PointTaskBonusParams;
-  export import PointTaskConfirmParams = PointTasksAPI.PointTaskConfirmParams;
+export declare namespace PointTasks {
+  export {
+    type PointTaskListResponse as PointTaskListResponse,
+    type PointTaskBonusParams as PointTaskBonusParams,
+    type PointTaskConfirmParams as PointTaskConfirmParams,
+  };
 }

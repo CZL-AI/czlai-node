@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as MedicalRecordsAPI from './medical-records';
 
 export class MedicalRecords extends APIResource {
   /**
@@ -163,12 +162,14 @@ export interface MedicalRecordOngoingRecordParams {
   pet_profile_id: number;
 }
 
-export namespace MedicalRecords {
-  export import MedicalRecord = MedicalRecordsAPI.MedicalRecord;
-  export import MedicalRecordRetrieveResponse = MedicalRecordsAPI.MedicalRecordRetrieveResponse;
-  export import MedicalRecordCreateListResponse = MedicalRecordsAPI.MedicalRecordCreateListResponse;
-  export import MedicalRecordRetrieveParams = MedicalRecordsAPI.MedicalRecordRetrieveParams;
-  export import MedicalRecordUpdateParams = MedicalRecordsAPI.MedicalRecordUpdateParams;
-  export import MedicalRecordCreateListParams = MedicalRecordsAPI.MedicalRecordCreateListParams;
-  export import MedicalRecordOngoingRecordParams = MedicalRecordsAPI.MedicalRecordOngoingRecordParams;
+export declare namespace MedicalRecords {
+  export {
+    type MedicalRecord as MedicalRecord,
+    type MedicalRecordRetrieveResponse as MedicalRecordRetrieveResponse,
+    type MedicalRecordCreateListResponse as MedicalRecordCreateListResponse,
+    type MedicalRecordRetrieveParams as MedicalRecordRetrieveParams,
+    type MedicalRecordUpdateParams as MedicalRecordUpdateParams,
+    type MedicalRecordCreateListParams as MedicalRecordCreateListParams,
+    type MedicalRecordOngoingRecordParams as MedicalRecordOngoingRecordParams,
+  };
 }

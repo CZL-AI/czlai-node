@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as UserPointsAPI from './user-points';
 
 export class UserPoints extends APIResource {
   /**
@@ -56,7 +55,9 @@ export interface UserPointCostReportParams {
   medical_record_id?: number;
 }
 
-export namespace UserPoints {
-  export import UserPointRetrieveResponse = UserPointsAPI.UserPointRetrieveResponse;
-  export import UserPointCostReportParams = UserPointsAPI.UserPointCostReportParams;
+export declare namespace UserPoints {
+  export {
+    type UserPointRetrieveResponse as UserPointRetrieveResponse,
+    type UserPointCostReportParams as UserPointCostReportParams,
+  };
 }

@@ -2,12 +2,14 @@
 
 import { APIResource } from '../../resource';
 import * as PetInfoAPI from './pet-info';
+import { PetInfo, PetInfoRetrieveParams } from './pet-info';
 
 export class Pets extends APIResource {
   petInfo: PetInfoAPI.PetInfo = new PetInfoAPI.PetInfo(this._client);
 }
 
-export namespace Pets {
-  export import PetInfo = PetInfoAPI.PetInfo;
-  export import PetInfoRetrieveParams = PetInfoAPI.PetInfoRetrieveParams;
+Pets.PetInfo = PetInfo;
+
+export declare namespace Pets {
+  export { PetInfo as PetInfo, type PetInfoRetrieveParams as PetInfoRetrieveParams };
 }
