@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2024-11-06)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/CZL-AI/czlai-node/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* rebuild project due to codegen change ([#4](https://github.com/CZL-AI/czlai-node/issues/4)) ([f9a13c2](https://github.com/CZL-AI/czlai-node/commit/f9a13c201d51250409c76b24cc36ba2100854183))
+
 ## 0.1.0-alpha.1 (2024-10-29)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/CZL-AI/czlai-node/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)
