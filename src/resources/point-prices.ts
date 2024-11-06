@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as PointPricesAPI from './point-prices';
 
 export class PointPrices extends APIResource {
   /**
@@ -46,6 +45,6 @@ export namespace PointPriceRetrieveResponse {
   }
 }
 
-export namespace PointPrices {
-  export import PointPriceRetrieveResponse = PointPricesAPI.PointPriceRetrieveResponse;
+export declare namespace PointPrices {
+  export { type PointPriceRetrieveResponse as PointPriceRetrieveResponse };
 }

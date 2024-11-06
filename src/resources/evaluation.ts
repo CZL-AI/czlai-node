@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as EvaluationAPI from './evaluation';
 
 export class Evaluation extends APIResource {
   /**
@@ -34,6 +33,6 @@ export interface EvaluationPutEvaluationParams {
   session_id: string;
 }
 
-export namespace Evaluation {
-  export import EvaluationPutEvaluationParams = EvaluationAPI.EvaluationPutEvaluationParams;
+export declare namespace Evaluation {
+  export { type EvaluationPutEvaluationParams as EvaluationPutEvaluationParams };
 }

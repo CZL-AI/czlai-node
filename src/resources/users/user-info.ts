@@ -2,7 +2,6 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as UserInfoAPI from './user-info';
 
 export class UserInfo extends APIResource {
   /**
@@ -24,6 +23,6 @@ export interface UserInfoRetrieveParams {
   uuid: string;
 }
 
-export namespace UserInfo {
-  export import UserInfoRetrieveParams = UserInfoAPI.UserInfoRetrieveParams;
+export declare namespace UserInfo {
+  export { type UserInfoRetrieveParams as UserInfoRetrieveParams };
 }

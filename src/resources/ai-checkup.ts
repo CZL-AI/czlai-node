@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AICheckupAPI from './ai-checkup';
 
 export class AICheckup extends APIResource {
   /**
@@ -261,17 +260,19 @@ export interface AICheckupUpdateProfileParams {
   update_type?: number;
 }
 
-export namespace AICheckup {
-  export import AICheckupIsFirstResponse = AICheckupAPI.AICheckupIsFirstResponse;
-  export import AICheckupSessionStartResponse = AICheckupAPI.AICheckupSessionStartResponse;
-  export import AICheckupSummaryResponse = AICheckupAPI.AICheckupSummaryResponse;
-  export import AICheckupUpdateProfileResponse = AICheckupAPI.AICheckupUpdateProfileResponse;
-  export import AICheckupIsFirstParams = AICheckupAPI.AICheckupIsFirstParams;
-  export import AICheckupPicResultParams = AICheckupAPI.AICheckupPicResultParams;
-  export import AICheckupQuestionParams = AICheckupAPI.AICheckupQuestionParams;
-  export import AICheckupQuestionResultParams = AICheckupAPI.AICheckupQuestionResultParams;
-  export import AICheckupReportParams = AICheckupAPI.AICheckupReportParams;
-  export import AICheckupReportTaskParams = AICheckupAPI.AICheckupReportTaskParams;
-  export import AICheckupSummaryParams = AICheckupAPI.AICheckupSummaryParams;
-  export import AICheckupUpdateProfileParams = AICheckupAPI.AICheckupUpdateProfileParams;
+export declare namespace AICheckup {
+  export {
+    type AICheckupIsFirstResponse as AICheckupIsFirstResponse,
+    type AICheckupSessionStartResponse as AICheckupSessionStartResponse,
+    type AICheckupSummaryResponse as AICheckupSummaryResponse,
+    type AICheckupUpdateProfileResponse as AICheckupUpdateProfileResponse,
+    type AICheckupIsFirstParams as AICheckupIsFirstParams,
+    type AICheckupPicResultParams as AICheckupPicResultParams,
+    type AICheckupQuestionParams as AICheckupQuestionParams,
+    type AICheckupQuestionResultParams as AICheckupQuestionResultParams,
+    type AICheckupReportParams as AICheckupReportParams,
+    type AICheckupReportTaskParams as AICheckupReportTaskParams,
+    type AICheckupSummaryParams as AICheckupSummaryParams,
+    type AICheckupUpdateProfileParams as AICheckupUpdateProfileParams,
+  };
 }

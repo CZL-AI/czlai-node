@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as BuriedpointsAPI from './buriedpoints';
 
 export class Buriedpoints extends APIResource {
   /**
@@ -29,6 +28,6 @@ export interface BuriedpointCreateParams {
   code?: string;
 }
 
-export namespace Buriedpoints {
-  export import BuriedpointCreateParams = BuriedpointsAPI.BuriedpointCreateParams;
+export declare namespace Buriedpoints {
+  export { type BuriedpointCreateParams as BuriedpointCreateParams };
 }

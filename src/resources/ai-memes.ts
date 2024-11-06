@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as AIMemesAPI from './ai-memes';
 
 export class AIMemes extends APIResource {
   /**
@@ -147,12 +146,14 @@ export interface AIMemeGenerateParams {
   meme_id?: number;
 }
 
-export namespace AIMemes {
-  export import AIMeme = AIMemesAPI.AIMeme;
-  export import AIMemeCreateResponse = AIMemesAPI.AIMemeCreateResponse;
-  export import AIMemeRetrieveResponse = AIMemesAPI.AIMemeRetrieveResponse;
-  export import AIMemeGenerateResponse = AIMemesAPI.AIMemeGenerateResponse;
-  export import AIMemeCreateParams = AIMemesAPI.AIMemeCreateParams;
-  export import AIMemeRetrieveParams = AIMemesAPI.AIMemeRetrieveParams;
-  export import AIMemeGenerateParams = AIMemesAPI.AIMemeGenerateParams;
+export declare namespace AIMemes {
+  export {
+    type AIMeme as AIMeme,
+    type AIMemeCreateResponse as AIMemeCreateResponse,
+    type AIMemeRetrieveResponse as AIMemeRetrieveResponse,
+    type AIMemeGenerateResponse as AIMemeGenerateResponse,
+    type AIMemeCreateParams as AIMemeCreateParams,
+    type AIMemeRetrieveParams as AIMemeRetrieveParams,
+    type AIMemeGenerateParams as AIMemeGenerateParams,
+  };
 }

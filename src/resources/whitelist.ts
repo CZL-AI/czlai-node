@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as WhitelistAPI from './whitelist';
 
 export class Whitelist extends APIResource {
   /**
@@ -42,7 +41,9 @@ export interface WhitelistSaveDataParams {
   save_data?: Array<string>;
 }
 
-export namespace Whitelist {
-  export import WhitelistFilteringDataParams = WhitelistAPI.WhitelistFilteringDataParams;
-  export import WhitelistSaveDataParams = WhitelistAPI.WhitelistSaveDataParams;
+export declare namespace Whitelist {
+  export {
+    type WhitelistFilteringDataParams as WhitelistFilteringDataParams,
+    type WhitelistSaveDataParams as WhitelistSaveDataParams,
+  };
 }

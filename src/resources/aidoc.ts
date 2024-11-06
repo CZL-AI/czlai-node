@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AidocAPI from './aidoc';
 
 export class Aidoc extends APIResource {
   /**
@@ -121,12 +120,14 @@ export interface AidocReportTaskParams {
   report_type?: number;
 }
 
-export namespace Aidoc {
-  export import AidocIfContinueAskResponse = AidocAPI.AidocIfContinueAskResponse;
-  export import AidocIfNeedImageResponse = AidocAPI.AidocIfNeedImageResponse;
-  export import AidocIfContinueAskParams = AidocAPI.AidocIfContinueAskParams;
-  export import AidocIfNeedImageParams = AidocAPI.AidocIfNeedImageParams;
-  export import AidocPicResultParams = AidocAPI.AidocPicResultParams;
-  export import AidocReportParams = AidocAPI.AidocReportParams;
-  export import AidocReportTaskParams = AidocAPI.AidocReportTaskParams;
+export declare namespace Aidoc {
+  export {
+    type AidocIfContinueAskResponse as AidocIfContinueAskResponse,
+    type AidocIfNeedImageResponse as AidocIfNeedImageResponse,
+    type AidocIfContinueAskParams as AidocIfContinueAskParams,
+    type AidocIfNeedImageParams as AidocIfNeedImageParams,
+    type AidocPicResultParams as AidocPicResultParams,
+    type AidocReportParams as AidocReportParams,
+    type AidocReportTaskParams as AidocReportTaskParams,
+  };
 }

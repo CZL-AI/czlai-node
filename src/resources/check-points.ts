@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as CheckPointsAPI from './check-points';
 
 export class CheckPoints extends APIResource {
   /**
@@ -39,6 +38,6 @@ export interface CheckPointCreateParams {
   related_id?: string;
 }
 
-export namespace CheckPoints {
-  export import CheckPointCreateParams = CheckPointsAPI.CheckPointCreateParams;
+export declare namespace CheckPoints {
+  export { type CheckPointCreateParams as CheckPointCreateParams };
 }

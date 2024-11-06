@@ -2,7 +2,6 @@
 
 import { APIResource } from '../../resource';
 import * as Core from '../../core';
-import * as SummaryAPI from './summary';
 
 export class Summary extends APIResource {
   /**
@@ -21,6 +20,6 @@ export interface SummaryCreateParams {
   session_id?: string;
 }
 
-export namespace Summary {
-  export import SummaryCreateParams = SummaryAPI.SummaryCreateParams;
+export declare namespace Summary {
+  export { type SummaryCreateParams as SummaryCreateParams };
 }

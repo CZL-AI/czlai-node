@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AipicsAPI from './aipics';
 
 export class Aipics extends APIResource {
   /**
@@ -39,6 +38,6 @@ export interface AipicSummaryParams {
   sub_module_type?: number;
 }
 
-export namespace Aipics {
-  export import AipicSummaryParams = AipicsAPI.AipicSummaryParams;
+export declare namespace Aipics {
+  export { type AipicSummaryParams as AipicSummaryParams };
 }
